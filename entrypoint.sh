@@ -5,10 +5,9 @@ ollama serve &
 
 # Wait for it to be ready
 echo "Waiting for Ollama to be ready..."
-until wget -q --spider http://localhost:11434/api/tags; do
+until curl -s http://localhost:11434/api/tags > /dev/null; do
   sleep 1
 done
-
 
 # Pull model
 echo "Pulling model..."
