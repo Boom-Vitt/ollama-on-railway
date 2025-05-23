@@ -11,7 +11,7 @@ done
 
 # Pull model
 echo "Pulling model..."
-ollama pull llama3
+ollama pull llama3.2:1b
 
 # Keep server running
 wait
